@@ -1,61 +1,18 @@
 public class Airport {
-    private String name; // Όνομα αεροδρομίου
-    private String latitude; // Γεωγραφικό πλάτος
-    private String longitude; // Γεωγραφικό μήκος
-    private int visits; // Μέγιστη χωρητικότητα αεροπλάνων
+    private String code, country, city;
+    private double latitude, longitude;
 
-    public Airport() {}
-
-    public Airport(String name, String latitude, String longitude) {
-        this.name = name;
+    public Airport(String code, String country, String city, double latitude, double longitude) {
+        this.code = code;
+        this.country = country;
+        this.city = city;
         this.latitude = latitude;
         this.longitude = longitude;
     }
 
-    // Κατασκευαστής
-    public Airport(String name, String latitude, String longitude, int visits) {
-        this.name = name;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.visits = visits;
-    }
-
-    // Getters και Setters
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
-    }
-
-    public String getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
-    }
-
-    public int getVisits() {
-        return visits;
-    }
-
-    public void setCapacity(int capacity) {
-        this.visits = visits;
-    }
-
-    // Μέθοδος για εμφάνιση πληροφοριών
-    public void displayInfo() {
-        System.out.printf("Αεροδρόμιο: %s, Συντεταγμένες: (%.2f, %.2f), Χωρητικότητα: %d%n",
-                name, latitude, longitude, visits);
-    }
+    public String getCode() { return code; }
+    public String getCountry() { return country; }
+    public String getCity() { return city; }
+    public double getLatitude() { return latitude; }
+    public double getLongitude() { return longitude; }
 }
